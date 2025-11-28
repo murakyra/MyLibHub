@@ -1,5 +1,4 @@
-
-[![My-Lib-Hub-logo.png](https://i.postimg.cc/zBjZZry8/My-Lib-Hub-logo.png)](https://postimg.cc/cgr5wP7b)
+[![My-Lib-Hub-logo-white.png](https://i.postimg.cc/K814f9Rn/My-Lib-Hub-logo-white.png)](https://postimg.cc/cvNs4B7H)
 
 # MyLibHub
 
