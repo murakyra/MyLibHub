@@ -57,7 +57,7 @@ class BookController extends Controller
 
         if ($request->hasFile('cover_image')) {
             $imageName = time().'.'.$request->cover_image->extension();
-            $request->cover_image->storeAs('public/covers', $imageName);
+            $request->cover_image->storeAs('covers', $imageName, 'public');
             $book->cover_image = 'covers/'.$imageName;
         }
 
