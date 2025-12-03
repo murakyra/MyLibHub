@@ -9,20 +9,17 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('books.index') }}">MyLibHub</a>
+            <a class="navbar-brand" href="{{ route('books.index') }}">
+            <img 
+                src="{{ asset('images/logo.png') }}" 
+                alt="MyLibHub Logo" 
+                style="height: 40px; width: auto;" 
+                class="d-inline-block align-text-top"
+            >
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('books.index') }}">Daftar Buku</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('books.create') }}">Tambah Buku</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
