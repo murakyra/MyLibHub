@@ -24,7 +24,7 @@
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</button>
                     </form>
-                    <a href="{{ route('books.index') }}" class="btn btn-secondary">Kembali ke Daftar Buku</a>
+                    <a href="{{ route('books.index') }}" class="btn btn-dark">Kembali ke Daftar Buku</a>
                 </div>
             </div>
         </div>

@@ -43,7 +43,7 @@
             <label for="cover_image" class="form-label">Gambar Cover</label>
             <input type="file" class="form-control" id="cover_image" name="cover_image">
         </div>
-        <button type="submit" class="btn btn-primary">Simpan Buku</button>
-        <a href="{{ route('books.index') }}" class="btn btn-secondary">Batal</a>
+        <button type="submit" class="btn btn-success">Simpan Buku</button>
+        <a href="{{ route('books.index') }}" class="btn btn-dark">Batal</a>
     </form>
 @endsection

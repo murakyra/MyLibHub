@@ -3,7 +3,7 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1>Daftar Buku</h1>
-        <a href="{{ route('books.create') }}" class="btn btn-primary">Tambah Buku Baru</a>
+        <a href="{{ route('books.create') }}" class="btn btn-success">Tambah Buku Baru</a>
     </div>
 
     <table class="table table-bordered">

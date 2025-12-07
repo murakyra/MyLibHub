@@ -47,7 +47,7 @@
                 <small class="form-text text-muted">Cover saat ini: <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Current Cover" style="width: 100px; height: auto; margin-top: 10px;"></small>
             @endif
         </div>
-        <button type="submit" class="btn btn-primary">Perbarui Buku</button>
-        <a href="{{ route('books.index') }}" class="btn btn-secondary">Batal</a>
+        <button type="submit" class="btn btn-success">Perbarui Buku</button>
+        <a href="{{ route('books.index') }}" class="btn btn-dark">Batal</a>
     </form>
 @endsection
