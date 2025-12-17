@@ -21,18 +21,14 @@ class CreateBooksTable extends Migration
             $table->integer('publication_year')->nullable();
             $table->string('isbn')->unique()->nullable();
             $table->text('description')->nullable();
-            $table->string('cover_image')->nullable(); // Untuk menyimpan path gambar cover
+            $table->string('cover_image')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('books');
     }
 }
+

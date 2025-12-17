@@ -8,33 +8,17 @@ use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $books = Book::latest()->paginate(10);
-        return view('books.index', compact('books')); // Pastikan 'books.index' benar
+        return view('books.index', compact('books'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('books.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -66,35 +50,16 @@ class BookController extends Controller
         return redirect()->route('books.index')->with('success', 'Buku berhasil ditambahkan!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
     public function show(Book $book)
     {
         return view('books.show', compact('book'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Book $book)
     {
         return view('books.edit', compact('book'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Book $book)
     {
         $request->validate([
@@ -115,7 +80,6 @@ class BookController extends Controller
         $book->description = $request->description;
 
         if ($request->hasFile('cover_image')) {
-            // Hapus gambar lama jika ada
             if ($book->cover_image) {
                 Storage::delete('public/' . $book->cover_image);
             }
@@ -129,12 +93,6 @@ class BookController extends Controller
         return redirect()->route('books.index')->with('success', 'Buku berhasil diperbarui!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Book $book)
     {
         if ($book->cover_image) {
