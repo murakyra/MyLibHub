@@ -120,7 +120,7 @@ class BookController extends Controller
                 Storage::delete('public/' . $book->cover_image);
             }
             $imageName = time().'.'.$request->cover_image->extension();
-            $request->cover_image->storeAs('public/covers', $imageName);
+            $request->cover_image->storeAs('covers/', $imageName);
             $book->cover_image = 'covers/'.$imageName;
         }
 
